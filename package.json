@@ -1,0 +1,26 @@
+<script>
+  // Wait for the page to fully load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Target all primary and secondary buttons
+    const primaryButtons = document.querySelectorAll('.btn:not(.btn-secondary)');
+    const secondaryButtons = document.querySelectorAll('.btn-secondary');
+
+    // Add click event to primary buttons
+    primaryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        alert('Thanks for choosing RideGo! Let\'s get started 🚀');
+        // You can also redirect them if needed:
+        // window.location.href = '/signup';
+      });
+    });
+
+    // Add click event to secondary buttons
+    secondaryButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        alert('Learn more about RideGo\'s amazing features!');
+        // Example: Scroll to Services section
+        document.querySelector('.services').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  });
+</script>
